@@ -1,0 +1,16 @@
+{
+    "manifest_version": 3,
+    "name": "Mynavi Clinic Scraper",
+    "version": "1.0.0",
+    "description": "Scrape Mynavi Clinic list pages and export clinic details.",
+    "permissions": [
+        "downloads"
+    ],
+    "host_permissions": [
+        "https://clinic.mynavi.jp/*"
+    ],
+    "action": {
+        "default_title": "Mynavi Scraper",
+        "default_popup": "popup.html"
+    }
+}

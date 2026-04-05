@@ -1,0 +1,127 @@
+:root {
+    --bg: #f3f5f8;
+    --panel: #ffffff;
+    --line: #d7deea;
+    --text: #1f2a37;
+    --muted: #4f5f73;
+    --primary: #0b62c2;
+    --primary-hover: #094f9c;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+    background: linear-gradient(135deg, #eef2f7, #f8fafc);
+    color: var(--text);
+}
+
+main {
+    max-width: 980px;
+    margin: 28px auto;
+    padding: 0 16px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+.lead {
+    margin: 8px 0 18px;
+    color: var(--muted);
+}
+
+.panel {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 14px;
+    margin-bottom: 14px;
+}
+
+label {
+    display: block;
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+input {
+    width: 100%;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 9px 10px;
+    margin-top: 6px;
+    font-size: 14px;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+    margin-top: 6px;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+button {
+    border: 0;
+    border-radius: 9px;
+    padding: 10px 14px;
+    font-size: 14px;
+    cursor: pointer;
+    background: var(--primary);
+    color: #fff;
+}
+
+button:hover:enabled {
+    background: var(--primary-hover);
+}
+
+button:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+}
+
+.status {
+    margin-top: 12px;
+    font-size: 13px;
+    color: var(--muted);
+}
+
+h2 {
+    margin: 0 0 8px;
+    font-size: 16px;
+}
+
+pre {
+    margin: 0;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    background: #fbfdff;
+    padding: 10px;
+    min-height: 280px;
+    max-height: 420px;
+    overflow: auto;
+    white-space: pre-wrap;
+    word-break: break-word;
+    font-size: 12px;
+    line-height: 1.45;
+}
+
+@media (max-width: 760px) {
+    .row {
+        grid-template-columns: 1fr;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+}
