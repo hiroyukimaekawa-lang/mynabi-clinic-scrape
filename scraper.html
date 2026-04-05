@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mynavi Clinic Scraper</title>
+    <link rel="stylesheet" href="scraper.css" />
+</head>
+
+<body>
+    <main>
+        <h1>Mynavi Clinic Scraper</h1>
+        <p class="lead">一覧ページからクリニック詳細ページに進み、店舗情報をJSON/CSVで保存します。</p>
+
+        <section class="panel">
+            <label>
+                開始URL
+                <input id="startUrl" type="url"
+                    value="https://clinic.mynavi.jp/article_list/13?ihmrxgbe20fa=%E3%82%AF%E3%83%AA%E3%83%8B%E3%83%83%E3%82%AF%E3%83%8A%E3%83%93" />
+            </label>
+
+            <div class="row">
+                <label>
+                    一覧ページ上限
+                    <input id="maxPages" type="number" min="1" value="80" />
+                </label>
+                <label>
+                    取得件数上限(0=全件)
+                    <input id="maxClinics" type="number" min="0" value="0" />
+                </label>
+                <label>
+                    待機秒
+                    <input id="delay" type="number" min="0" step="0.1" value="0.4" />
+                </label>
+            </div>
+
+            <div class="buttons">
+                <button id="startBtn">実行</button>
+                <button id="jsonBtn" disabled>JSON保存</button>
+                <button id="csvBtn" disabled>CSV保存</button>
+            </div>
+
+            <div id="status" class="status">待機中</div>
+        </section>
+
+        <section class="panel">
+            <h2>ログ</h2>
+            <pre id="log"></pre>
+        </section>
+    </main>
+    <script src="scraper.js"></script>
+</body>
+
+</html>
